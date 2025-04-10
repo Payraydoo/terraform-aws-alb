@@ -15,10 +15,10 @@ This module creates an Application Load Balancer (ALB) with target groups and li
 
 ```hcl
 module "alb" {
-  source  = "your-org/alb/terraform"
+  source  = "payraydoo/alb/terraform"
   version = "0.1.0"
   
-  tag_org        = "company"
+  tag_org        = "payraydoo"
   env            = "dev"
   vpc_id         = module.vpc.id
   security_groups = [module.vpc.vpc_default_sg_id, module.cloudflare-sg.id]
